@@ -2,7 +2,7 @@
 
 print("Welcome. Enter a number and I'll tell you if it's a prime a number.")
 
-#if the input is not positive integer, ask for it again
+#if the input is not a positive integer, ask for it again
 correct_input = False
 while correct_input == False:
   num = input("Enter a positive whole number: ")
