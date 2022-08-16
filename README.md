@@ -1,2 +1,1 @@
-# prime_numbers
-Is the entered number a prime number?
+This program will take a number from the user and it will say if it's a prime number or not.
