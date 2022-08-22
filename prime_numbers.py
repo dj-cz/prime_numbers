@@ -4,6 +4,7 @@ print("Welcome. Enter a number and I'll tell you if it's a prime a number.")
 
 #if the input is not a positive integer, ask for it again
 correct_input = False
+
 while correct_input == False:
   num = input("Enter a positive whole number: ")
   if num.isdigit() == False:
@@ -11,17 +12,23 @@ while correct_input == False:
   else:
     correct_input = True
 
-#if num has divisors except for 1 and itself, add it to the divisors list
-divisors = []
-num = int(num)
-for i in range(2,num):
-  if num % i == 0:
-    divisors.append(i)
 
-#if the list of divisor is not empty or the number is 0 or 1, it's a prime number
-if divisors or num in (0, 1):
-  print(f"Number {num} is not a prime number.")
-  exit()
-else:
-  print(f"Number {num} is a prime number.")
-  exit()
+#find out if the entered number is a prime number
+def prime_numbers(num):
+  num = int(num)
+  is_prime_number = True
+
+  for i in range(2,num):
+    if num % i == 0:
+      is_prime_number = False
+      break
+
+  if is_prime_number:
+    return (f"The number {num} is a prime number.")
+  else:
+    return (f"The number {num} is not a prime number.")
+
+result = prime_numbers(num)
+
+print(result)
+
